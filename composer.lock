@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c9de871994b1b736a1bd6cb574896e34",
+    "content-hash": "9f5ed91ff1a7e4b2550e45f75bc9ee63",
     "packages": [
         {
             "name": "composer/semver",
@@ -1267,6 +1267,328 @@
                 }
             ],
             "time": "2025-03-06T22:45:56+00:00"
+        },
+        {
+            "name": "longitude-one/doctrine-spatial",
+            "version": "6.0.0-RC.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/longitude-one/doctrine-spatial.git",
+                "reference": "35865a77e08a19b4d59cfd23747ce505498fabc1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/longitude-one/doctrine-spatial/zipball/35865a77e08a19b4d59cfd23747ce505498fabc1",
+                "reference": "35865a77e08a19b4d59cfd23747ce505498fabc1",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/orm": "^3.6",
+                "ext-mbstring": "*",
+                "longitude-one/geo-parser": "^4.0.0",
+                "longitude-one/wkb-parser": "^3.0.1",
+                "longitude-one/wkt-parser": "^3.0.1",
+                "php": "^8.4"
+            },
+            "replace": {
+                "creof/doctrine2-spatial": "*"
+            },
+            "require-dev": {
+                "dg/bypass-finals": "^1.11",
+                "monolog/monolog": "^3.0",
+                "phpunit/phpcov": "^13.0",
+                "phpunit/phpunit": "^13.0",
+                "symfony/cache": "^7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LongitudeOne\\Spatial\\": "lib/LongitudeOne/Spatial/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Derek Lambert",
+                    "email": "dlambert@dereklambert.com",
+                    "role": "Historical author"
+                },
+                {
+                    "name": "Alexandre Tranchant",
+                    "email": "alexandre.tranchant@gmail.com",
+                    "role": "Lead maintainer"
+                }
+            ],
+            "description": "Doctrine multi-platform support for spatial types and functions, compliant with Doctrine 2.19, 3.1, and dev ones (3.2 and 4.0).",
+            "keywords": [
+                "database",
+                "dbal",
+                "geography",
+                "geometry",
+                "gis",
+                "iso-13249",
+                "mariadb",
+                "mysql",
+                "opengis",
+                "orm",
+                "postgis",
+                "postgresql",
+                "spatial"
+            ],
+            "support": {
+                "issues": "https://github.com/longitude-one/doctrine-spatial/issues",
+                "source": "https://github.com/longitude-one/doctrine-spatial/tree/6.0.0-RC.1"
+            },
+            "funding": [
+                {
+                    "url": "https://ko-fi.com/longitudeone",
+                    "type": "ko_fi"
+                }
+            ],
+            "time": "2026-09-04T21:22:00+00:00"
+        },
+        {
+            "name": "longitude-one/geo-parser",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/longitude-one/geo-parser.git",
+                "reference": "6d298cf0b11e6b1386f4cd58afd10df9c3136a32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/longitude-one/geo-parser/zipball/6d298cf0b11e6b1386f4cd58afd10df9c3136a32",
+                "reference": "6d298cf0b11e6b1386f4cd58afd10df9c3136a32",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/lexer": "^3.0",
+                "longitude-one/spatial-core": "^1.0",
+                "php": "^8.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^12.5.33"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "LongitudeOne\\GeoParser": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandre Tranchant",
+                    "email": "alexandre.tranchant@gmail.com"
+                },
+                {
+                    "name": "Derek J. Lambert",
+                    "email": "dlambert@dereklambert.com"
+                }
+            ],
+            "description": "Parser for geography coordinate strings",
+            "keywords": [
+                "coordinate",
+                "geo",
+                "geography",
+                "geometry",
+                "lexer",
+                "parser",
+                "spatial",
+                "string",
+                "text"
+            ],
+            "support": {
+                "issues": "https://github.com/longitude-one/geo-parser/issues",
+                "source": "https://github.com/longitude-one/geo-parser/tree/4.0.0"
+            },
+            "time": "2026-08-30T13:52:27+00:00"
+        },
+        {
+            "name": "longitude-one/spatial-core",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/longitude-one/spatial-core.git",
+                "reference": "305592e61b4092d6c8d5d4c11a14c4ff67155bab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/longitude-one/spatial-core/zipball/305592e61b4092d6c8d5d4c11a14c4ff67155bab",
+                "reference": "305592e61b4092d6c8d5d4c11a14c4ff67155bab",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": "^8.3"
+            },
+            "require-dev": {
+                "phpunit/phpcov": "^11.0",
+                "phpunit/phpunit": "^12.5.34"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LongitudeOne\\Core\\": "lib/LongitudeOne/Core/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandre Tranchant",
+                    "email": "alexandre.tranchant@gmail.com",
+                    "role": "Lead maintainer"
+                }
+            ],
+            "description": "Core classes for other LongitudeOne spatial libraries.",
+            "keywords": [
+                "geo",
+                "geography",
+                "geometry",
+                "gis",
+                "longitude-one",
+                "spatial"
+            ],
+            "support": {
+                "issues": "https://github.com/longitude-one/spatial-core/issues",
+                "source": "https://github.com/longitude-one/spatial-core/tree/1.1.0"
+            },
+            "time": "2026-09-04T17:21:17+00:00"
+        },
+        {
+            "name": "longitude-one/wkb-parser",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/longitude-one/wkb-parser.git",
+                "reference": "86bfca8ec4e94190f5107c0dbb1b98f7ea27a2ae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/longitude-one/wkb-parser/zipball/86bfca8ec4e94190f5107c0dbb1b98f7ea27a2ae",
+                "reference": "86bfca8ec4e94190f5107c0dbb1b98f7ea27a2ae",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.5.16"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "LongitudeOne\\Geo\\WKB": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Derek J. Lambert",
+                    "email": "dlambert@dereklambert.com"
+                },
+                {
+                    "name": "Alexandre Tranchant",
+                    "email": "alexandre.tranchant@gmail.com"
+                }
+            ],
+            "description": "Parser for well-known binary (WKB/EWKB) object data",
+            "keywords": [
+                "ewkb",
+                "geography",
+                "geometry",
+                "parser",
+                "spatial",
+                "string",
+                "text",
+                "wkb"
+            ],
+            "support": {
+                "issues": "https://github.com/longitude-one/wkb-parser/issues",
+                "source": "https://github.com/longitude-one/wkb-parser/tree/3.0.1"
+            },
+            "time": "2026-06-24T10:34:26+00:00"
+        },
+        {
+            "name": "longitude-one/wkt-parser",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/longitude-one/wkt-parser.git",
+                "reference": "5041030874404f9b0ac708001310ba98e3571854"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/longitude-one/wkt-parser/zipball/5041030874404f9b0ac708001310ba98e3571854",
+                "reference": "5041030874404f9b0ac708001310ba98e3571854",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/lexer": "^2.1|^3.0",
+                "php": "^8.1"
+            },
+            "replace": {
+                "creof/wkt-parser": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "LongitudeOne\\Geo\\WKT": "lib/",
+                    "LongitudeOne\\Geo\\WKT\\Tests": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandre Tranchant",
+                    "email": "alexandre.tranchant@gmail.com"
+                },
+                {
+                    "name": "axi"
+                },
+                {
+                    "name": "Derek J. Lambert",
+                    "email": "dlambert@dereklambert.com"
+                },
+                {
+                    "name": "ellisgl"
+                }
+            ],
+            "description": "Parser for well-known text (WKT) object strings",
+            "keywords": [
+                "ewkt",
+                "geography",
+                "geometry",
+                "lexer",
+                "parser",
+                "spatial",
+                "string",
+                "text",
+                "wkt"
+            ],
+            "support": {
+                "issues": "https://github.com/longitude-one/wkt-parser/issues",
+                "source": "https://github.com/longitude-one/wkt-parser/tree/3.0.1"
+            },
+            "time": "2026-06-25T16:38:43+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -11116,7 +11438,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "longitude-one/doctrine-spatial": 5
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
