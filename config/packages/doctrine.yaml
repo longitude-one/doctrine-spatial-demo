@@ -7,6 +7,16 @@ doctrine:
         # either here or in the DATABASE_URL env var (see .env file)
         #server_version: '16'
 
+        # Longitude-One/Doctrine-Spatial types configuration
+        # For this tutorial, we will explore the Point, Polygon and LineString types.
+        types:
+            point:      LongitudeOne\Spatial\DBAL\Types\Geometry\PointType
+            polygon:    LongitudeOne\Spatial\DBAL\Types\Geometry\PolygonType
+        # Do not forget to add the mapping types as well, otherwise you will get an error when trying to use them in your entities.
+        mapping_types:
+            point: point
+            polygon: polygon
+
         profiling_collect_backtrace: '%kernel.debug%'
     orm:
         validate_xml_mapping: true

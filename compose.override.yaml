@@ -2,6 +2,8 @@
 services:
 ###> doctrine/doctrine-bundle ###
   database:
+    # The PostGIS image requires AMD64 emulation on Apple Silicon (M4).
+    platform: linux/amd64
     ports:
       - "5432"
 ###< doctrine/doctrine-bundle ###
