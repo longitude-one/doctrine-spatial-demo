@@ -32,6 +32,11 @@ doctrine:
                 prefix: 'App\Entity'
                 alias: App
 
+        dql:
+            # Custom DQL functions for spatial queries implemented by Longitude-One/Doctrine-Spatial
+            numeric_functions:
+                ST_Within: LongitudeOne\Spatial\ORM\Query\AST\Functions\Standard\StWithin
+
 when@test:
     doctrine:
         dbal:
