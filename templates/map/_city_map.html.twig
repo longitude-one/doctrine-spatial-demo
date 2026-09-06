@@ -1,0 +1,6 @@
+    <div class="city-map"
+         {{ stimulus_controller('city-map') }}
+         data-action="ux:map:pre-connect->city-map#configure ux:map:polygon:before-create->city-map#stylePolygon ux:map:connect->city-map#fitCity"
+         style="height: 660px; border-radius: 8px; overflow: hidden; border: 1px solid #334155;">
+        {{ ux_map(map, { style: 'height: 100%; width: 100%;' }) }}
+    </div>

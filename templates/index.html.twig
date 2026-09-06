@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}All cities and heroes{% endblock %}
+
+{% block body %}
+    <main style="padding: 2rem; max-width: 1200px; margin: 0 auto;">
+        <h1>All cities and heroes</h1>
+        <p>{{ cities|length }} cities and {{ heroes|length }} heroes on the map.</p>
+
+        {% include 'map/_city_map.html.twig' with { map: map } only %}
+
+        <h2>Cities</h2>
+        <ul id="cities">
+            {% for city in cities %}
+                <li>{{ city.name }}</li>
+            {% else %}
+                <li>No cities to display. Did you miss to load fixtures?</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Heroes</h2>
+        <ul id="heroes">
+            {% for hero in heroes %}
+                <li>
+                    <strong>{{ hero.name }}</strong>
+                    {% if hero.description %} — {{ hero.description }}{% endif %}
+                </li>
+            {% else %}
+                <li>No heroes to display.</li>
+            {% endfor %}
+        </ul>
+    </main>
+{% endblock %}
