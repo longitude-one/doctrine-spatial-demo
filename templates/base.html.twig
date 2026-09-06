@@ -19,6 +19,17 @@
         {% endif %}
     </head>
     <body>
+        <nav class="view-menu" aria-label="Map views">
+            {% set current_route = app.current_route %}
+            <a href="{{ path('home') }}"
+               {% if current_route == 'home' %}aria-current="page"{% endif %}>
+                All cities and heroes
+            </a>
+            <a href="{{ path('app_who_are_in_city') }}"
+               {% if current_route == 'app_who_are_in_city' %}aria-current="page"{% endif %}>
+                Heroes in Gotham City
+            </a>
+        </nav>
         {% block body %}{% endblock %}
     </body>
 </html>

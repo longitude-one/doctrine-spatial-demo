@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ city.name }}{% endblock %}
+
+{% block body %}
+    <main style="padding: 2rem; max-width: 1200px; margin: 0 auto;">
+        <h1>Heroes in {{ city.name }}</h1>
+        <p>{{ heroes|length }} heroes in {{ city.name }}.</p>
+
+        {% include 'map/_city_map.html.twig' with { map: map } only %}
+
+        <h2>Heroes in {{ city.name }}</h2>
+        <ul id="heroes">
+            {% for hero in heroes %}
+                <li>
+                    <strong>{{ hero.name }}</strong>
+                    {% if hero.description %} — {{ hero.description }}{% endif %}
+                </li>
+            {% else %}
+                <li>No heroes to display.</li>
+            {% endfor %}
+        </ul>
+    </main>
+{% endblock %}

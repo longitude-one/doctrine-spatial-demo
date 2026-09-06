@@ -1,16 +1,6 @@
 <?php
 
-declare(strict_types=1);
-
-/**
- * This file is part of the LongitudeOne DoctrineSpatial Symfony demo.
- *
- * PHP 8.4 | Symfony 8.1
- *
- * Copyright LongitudeOne - Alexandre Tranchant.
- * Copyright 2024-2026.
- *
- */
+// This file is auto-generated and is for apps only. Bundles SHOULD NOT rely on its content.
 
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
