@@ -14,6 +14,7 @@ declare(strict_types=1);
 
 namespace App\Repository;
 
+use App\Entity\City;
 use App\Entity\Hero;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -28,20 +29,19 @@ class HeroRepository extends ServiceEntityRepository
         parent::__construct($registry, Hero::class);
     }
 
-    //    /**
-    //     * @return Hero[] Returns an array of Hero objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('h')
-    //            ->andWhere('h.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('h.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
+    /**
+     * @return Hero[] Returns an array of Hero objects
+     */
+    public function findHeroesInCity(City $city): array
+    {
+        return $this->createQueryBuilder('h')
+            ->andWhere('ST_Within(h.position, :cityGeometry) = true')
+            ->setParameter('cityGeometry', $city->getSurface(), 'polygon')
+            ->orderBy('h.name', 'ASC')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 
     //    public function findOneBySomeField($value): ?Hero
     //    {
